@@ -4,17 +4,30 @@ import java.util.Scanner;
 
 public class TicTacToe {
 
-    void uc1 (char [] ch) {
+    void createBoard (char [] ch) {
         for(int i=1;i<10;i++) {
             ch[i] = ' ';
         }
     }
 
-    char uc2() {
+    char playerChoice () {
 
         System.out.println("Enter your choice X or O.....");
         Scanner scanner = new Scanner(System.in);
         return scanner.next(). charAt(0);
+    }
+
+    void showBoard() {
+
+        System.out.println("  |   |   |   |");
+        System.out.println("--|---|---|---|--");
+        System.out.println("  |   |   |   |");
+        System.out.println("--|---|---|---|--");
+        System.out.println("  |   |   |   |");
+        System.out.println("--|---|---|---|--");
+        System.out.println("  |   |   |   |");
+        System.out.println("--|---|---|---|--");
+        System.out.println("  |   |   |   |");
     }
 
     public static void main(String[] args) {
@@ -23,9 +36,9 @@ public class TicTacToe {
 
         char [] ch = new char[10];
         TicTacToe t1 = new TicTacToe();
-        t1.uc1(ch);
+        t1.createBoard(ch);
 
-        char choice = t1.uc2();
+        char choice = t1.playerChoice();
         char choice1;
         char choice2;
 
@@ -38,6 +51,8 @@ public class TicTacToe {
             choice1 = choice;
             choice2 = 'X';
         }
+
+        t1.showBoard();
     }
 
 }
