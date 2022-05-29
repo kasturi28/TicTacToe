@@ -17,17 +17,14 @@ public class TicTacToe {
         return scanner.next(). charAt(0);
     }
 
-    void showBoard() {
+    void showBoard(char choice, char ch[]) {
 
-        System.out.println("  |   |   |   |");
-        System.out.println("--|---|---|---|--");
-        System.out.println("  |   |   |   |");
-        System.out.println("--|---|---|---|--");
-        System.out.println("  |   |   |   |");
-        System.out.println("--|---|---|---|--");
-        System.out.println("  |   |   |   |");
-        System.out.println("--|---|---|---|--");
-        System.out.println("  |   |   |   |");
+        System.out.println("Enter desired position......");
+        Scanner scanner = new Scanner(System.in);
+        int position = scanner.nextInt();
+        ch[position] = choice;
+        System.out.println(" " + ch[1] + " | " + ch[2] + " | " + ch[3] + " \n----------\n " + ch[4] + " | " + ch[5] + " | " + ch[6] + " \n----------\n " + ch[7] + " | " + ch[8] + " | " + ch[9] + " ");
+
     }
 
     public static void main(String[] args) {
@@ -52,7 +49,7 @@ public class TicTacToe {
             choice2 = 'X';
         }
 
-        t1.showBoard();
+        t1.showBoard(choice , ch);
     }
 
 }
